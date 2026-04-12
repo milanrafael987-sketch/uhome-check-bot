@@ -5,7 +5,8 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import aiosqlite
 from rapidfuzz import fuzz
 
-API_TOKEN = "PASTE_YOUR_TOKEN_HERE"
+import os
+API_TOKEN = os.getenv("BOT_TOKEN")
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
