@@ -142,7 +142,7 @@ async def toggle(callback: types.CallbackQuery):
 
         await db.commit()
 items = [{"text": t, "status": s, "user": u} for t, s, u in updated]
-    text = format_checklist(checklist[0], items)
+text = format_checklist(checklist[0], items)
 
     await bot.edit_message_text(
         text,
